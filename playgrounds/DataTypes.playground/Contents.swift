@@ -22,7 +22,7 @@ var surface: Double = 2.318741
 // String
 var name: String = "Ilyes"
 
-// Character
 
+// Character
 var singleCharacter: Character = "a"
 
