@@ -26,4 +26,3 @@ var name: String = "Ilyes"
 
 var singleCharacter: Character = "a"
 
-// O
