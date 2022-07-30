@@ -30,18 +30,13 @@ class ContactsViewModel {
                 request.sortOrder = .givenName
                 
                 do {
-                    // 5. prepare fetched contacts for storage......
-                    var fetchedContacts = [CNContact]()
-                    
-                    //
                     try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
-                        // 6. select only contacts with phone numbers...
+                        // 5. select only contacts with phone numbers...
                         if (contact.phoneNumbers.first?.value.stringValue) != nil {
-                            fetchedContacts.append(contact)
+                            self.contacts.append(contact)
                         }
                     })
                     
-                    self.contacts = fetchedContacts
                 } catch let error {
                     print("Failed to fetch contacts...", error)
                 }
